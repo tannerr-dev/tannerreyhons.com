@@ -50,7 +50,7 @@ table {
 /* my styles */
 :root {
 --bg: hsl(24, 10%, 10%);
---bg: #121212;
+/* --bg: #121212; */
 /* background-color: #121212; */
 --bg-op: hsla(24, 12%, 12%, 0.9);
 --max: hsl(24, 2%, 2%);
@@ -107,6 +107,32 @@ nav {
   position: fixed;
   top: 24px;
   right: 40px;
+}
+#resume {
+  border-radius:8px;
+  opacity:0.7;
+  z-index: 2;
+  position: fixed;
+  top: 24px;
+  right: 140px;
+  background-color:var(--bg);
+  border-radius:8px;
+  height:42px;
+
+  text-align:center;
+  margin:auto;
+  padding:12px 20px 22px 20px;
+  line-height:1.6rem;
+  font-weight:bold;
+  font-size: 1rem;
+  color: antiquewhite;
+  font-family: Arial;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#resume:hover {
+  background-color:var(--bg-op);
 }
 main {
   padding-top:152px;
