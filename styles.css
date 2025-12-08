@@ -125,7 +125,7 @@ nav {
   line-height:1.6rem;
   font-weight:bold;
   font-size: 1rem;
-  color: antiquewhite;
+  color: var(--text);
   font-family: Arial;
   text-decoration: none;
   border-radius: 6px;
