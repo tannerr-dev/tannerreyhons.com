@@ -1,6 +1,11 @@
-# tannerreyhons.com
+# tannerr.com
 
-index.html -> tannerreyhons.com
+-> tannerr.com
 ```bash
-scp -r /home/ttannerr/stuff/apps/tannerr.com/public/* tannerr@5.78.64.183:/var/www/tannerreyhons/
+scp -r /home/ttannerr/stuff/apps/tannerreyhons.com/* tannerr@5.78.64.183:/var/www/tannerr.com/
+```
+
+-> tannerreyhons.com
+```bash
+scp -r /home/ttannerr/stuff/apps/tannerreyhons.com/* tannerr@5.78.64.183:/var/www/personal-site/
 ```
