@@ -52,7 +52,9 @@ table {
 --bg: hsl(24, 10%, 10%);
 /* --bg: #121212; */
 /* background-color: #121212; */
---bg-op: hsla(24, 12%, 12%, 0.9);
+--bg-op: hsla(24, 18%, 22%, 0.9);
+--bg-acc: hsla(24, 18%, 22%, 1);
+--bg-hov: hsla(24, 28%, 32%, 1);
 --max: hsl(24, 2%, 2%);
 --text: hsl(17, 28%, 92%);
 --text2: hsl(17, 10%, 60%);
@@ -78,6 +80,8 @@ table {
 /* --bg: hsl(37, 18%, 75%); */
 /* --bg: rgb(37, 18, 75); */
 --bg-op: hsla(37, 28%, 75%, 0.9);
+--bg-acc: hsla(37, 28%, 75%, 1);
+--bg-hov: hsla(37, 18%, 65%, 1);
 --max: hsl(17, 38%, 90%);
 --text: hsl(24, 2%, 2%);
 --text2: hsl(24, 2%, 22%);
@@ -97,31 +101,42 @@ body {
   background-attachment: fixed;
 }
 
-nav {
-  background-color:var(--bg);
-  padding:10px 20px 10px 20px;
+#theme-btn {
+  background-color:var(--bg-acc);
   border-radius:8px;
-  opacity:0.7;
-  /* padding: 8px; */
+  border:none;
+
   z-index: 2;
   position: fixed;
   top: 24px;
   right: 40px;
+
+  cursor: pointer;
+
+  --btn-size:72px;
+  height:var(--btn-size);
+  width:var(--btn-size);
+
+  text-align:center;
 }
+.pointer{
+  cursor: pointer;
+}
+
 #resume {
   border-radius:8px;
-  opacity:0.7;
   z-index: 2;
   position: fixed;
   top: 24px;
-  right: 140px;
-  background-color:var(--bg);
+  right: 124px;
+  background-color:var(--bg-acc);
   border-radius:8px;
-  height:42px;
+
+  height:72px;
+  width:100px;
 
   text-align:center;
   margin:auto;
-  padding:12px 20px 22px 20px;
   line-height:1.6rem;
   font-weight:bold;
   font-size: 1rem;
@@ -131,8 +146,16 @@ nav {
   border-radius: 6px;
   cursor: pointer;
 }
-#resume:hover {
-  background-color:var(--bg-op);
+#theme-btn:hover, #resume:hover {
+  background-color:var(--bg-hov);
+}
+#sticky-banner {
+  background-color:var(--bg);
+  /* background-color:red; */
+  z-index:1;
+  height:120px;
+  position:sticky;
+  top:0;
 }
 main {
   padding-top:152px;
@@ -165,7 +188,6 @@ p {
   color: var(--text);
   opacity: 0.8;
   padding-top:8px;
-
 }
 ul{
   margin: 10px 0 0 16px;
@@ -278,8 +300,8 @@ footer span{
 }
 .theme-switch {
   color: var(--text);
-  /* margin-right: 14px; */
-  margin-top: 6px;
+  height:100px;
+  width:100px;
 }
 footer {
   text-align: center;

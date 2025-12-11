@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="logo_white.svg" />
     <title>Tanner Reyhons</title>
 
-    <script is:inline>
+    <script>
       function detectColorScheme() {
         var theme = "dark"; 
         if (localStorage.getItem("theme")) {
@@ -36,16 +36,20 @@
     </script>
   </head>
   <body>
-    <a id="resume" href="Tanner_Reyhons_Resume.pdf" target="_blank" >Download<br>Resume</a>
-<!-- download="Tanner_Reyhons_Resume.pdf" -->
-    <nav class="flex-row">
-        <label
-          id="theme-switch"
-          class="theme-switch"
-          for="checkbox_theme"
-          style="height:50px"
-        >
-          <!-- <span>Lights💡?</span> -->
+    <a id="resume" href="Tanner_Reyhons_Resume.pdf" target="_blank">
+      <div class="flex-row">
+        <p>
+          Resume<br>PDF
+        </p>
+      </div>
+    </a>
+    <label
+      id="theme-switch"
+      class="theme-switch pointer"
+      for="checkbox_theme"
+    >
+    <div id="theme-btn" class="flex-row pointer">
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="42"
@@ -56,7 +60,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-sun-moon"
+            class="lucide lucide-sun-moon pointer"
           >
             <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"></path>
             <path d="M12 2v2"></path>
@@ -69,10 +73,11 @@
             <path d="m19.1 4.9-1.4 1.4"></path>
           </svg>
           <input type="checkbox" id="checkbox_theme" style="display:none;" />
+        </div>
+        </div>
         </label>
-    </nav>
-      <div class="cook" style="height:120px;">
-      </div>
+      <div class="cook" style="height:120px;"></div>
+      <!-- <div id="sticky-banner"></div> -->
       <main>
         <span class="hi"> 
           Hi! My name is
@@ -203,7 +208,6 @@
           For the last few years I have been dedicated to applying my web development and programming knowledge to help the teams at Chromebookparts.com with their work and making their day to day easier and more efficient. As a Data Analyst, I have been using Netsuite alongside Python and the Pandas library to extract and manipulate business data to be useful for our teams. I helped clean up the database and propose new data modelling strategies. I built multiple web apps and software integrations.
           </p>
         </section>
-
       </main>
       <div class="cook" style="height:620px;">
       </div>
@@ -236,23 +240,14 @@
           href="https://www.linkedin.com/in/tanner-reyhons-984311235/"
           target="_blank"
         >
-          <svg
-            id="linkedin"
-            class="social-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-            ></path>
+          <svg id="linkedin" class="social-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
           </svg>
         </a>
       </div>
         <span>&copy; Copyright 2025, Tanner Reyhons</span> 
     </footer>
-    <script is:inline>
+    <script>
       function switchTheme(e) {
         if (e.target.checked) {
           localStorage.setItem("theme", "light");
